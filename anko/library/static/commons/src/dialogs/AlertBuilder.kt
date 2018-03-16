@@ -100,3 +100,9 @@ inline fun AlertBuilder<*>.yesButton(noinline handler: (dialog: DialogInterface)
 
 inline fun AlertBuilder<*>.noButton(noinline handler: (dialog: DialogInterface) -> Unit) =
     negativeButton(android.R.string.no, handler)
+
+inline fun AlertBuilder<*>.yesButton( text:String , noinline handler: (dialog: DialogInterface) -> Unit) =
+        positiveButton(text, handler)
+
+inline fun AlertBuilder<*>.noButton(text:String , noinline handler: (dialog: DialogInterface) -> Unit) =
+        negativeButton(text, handler)
